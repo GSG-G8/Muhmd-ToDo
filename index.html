@@ -10,7 +10,28 @@
   <body>
     <main>
       <section class="add-section">
-        Add Section
+        <div class="form__div">
+          <div class="form__label-input-div">
+            <label for="name">Name</label>
+            <input type="text" id="addName" placeholder="To-Do Name" />
+          </div>
+          <div class="form__label-input-div">
+            <label for="details">Details</label>
+            <input type="text" id="addDetails" placeholder="To-Do Details" />
+          </div>
+          <div class="form__label-input-div">
+            <label for="date">Date</label>
+            <input type="date" id="addDate" />
+          </div>
+          <div class="form__checkbox">
+            <label for="Done">Done</label>
+            <input type="checkbox" id="todoDone" />
+          </div>
+
+          <button class="form__btn" id="addButton" type="submit">
+            Add To-Do
+          </button>
+        </div>
       </section>
       <section class="show-section">
         Show Section
