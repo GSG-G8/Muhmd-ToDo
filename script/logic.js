@@ -1,31 +1,17 @@
-const onePlusOne = (num) => {
-    return num + 1;
-}
+const generateId = (() => {
+    let idCounter = 0;
+    const incrementCounter = () => idCounter++;
+    return incrementCounter;
+})()
 
-const addTodo = (array, todo) => {
-    return [...array, todo]
-}
+const addTodo = (array, todo) => [...array, todo];
 
-let dataArray = [{
-    id: 0,
-    Name: "Football",
-    Details: "Playing football with the gang",
-    Done: false
-}]
-let todo = {
-    id: 1,
-    Name: "Basketball",
-    Details: "Playing Basketball with the gang",
-    Done: true
-}
-
-console.log(addTodo(dataArray, todo))
-
+const removeTodo = (array, Id) => array.filter(todo => todo.id !== Id);
 
 
 if (typeof exports !== "undefined") {
     module.exports = {
-        onePlusOne,
-        addTodo
+        addTodo,
+        removeTodo
     }
 }
