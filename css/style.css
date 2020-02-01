@@ -1,10 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section {
+  margin: 20px 20px 20px 100px;
+}
 .form__div {
   display: flex;
   align-items: center;
-  margin-right: 100px;
-  background-color: #fff;
-  padding: 10px 50px;
-  border-radius: 10px;
 }
 
 .form__label-input-div {
@@ -44,4 +52,20 @@ label {
   color: #fff;
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
   margin-left: 20px;
+}
+
+.show-section {
+  border: 3px solid #555;
+  border-radius: 24px;
+}
+
+.showSection__div {
+  display: flex;
+  align-items: center;
+  padding: 5px 50px;
+  border-bottom: 3px solid #000;
+}
+
+.showSection__div:last-child {
+  border: none;
 }
