@@ -1,6 +1,6 @@
 let todoId = JSON.parse(localStorage.getItem("todoId"));
 if (!todoId) {
-    todoId = -1;
+    todoId = 0;
 }
 const generateId = () => {
     todoId++;
@@ -10,13 +10,13 @@ const generateId = () => {
 
 const addTodo = (array, todo) => [...array, todo];
 
-const removeTodo = (array, Id) => array.filter(todo => todo.id !== Id);
+const deleteTodo = (array, Id) => array.filter(todo => todo.id !== Id);
 
 
 if (typeof exports !== "undefined") {
     module.exports = {
         generateId,
         addTodo,
-        removeTodo
+        deleteTodo
     }
 }

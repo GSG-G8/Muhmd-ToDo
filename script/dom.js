@@ -36,6 +36,8 @@ for (let i = 0; i < dataArray.length; i++) {
     const checkboxShow = document.createElement('input');
     checkboxShow.setAttribute('type', "checkbox");
     dataArray[i]['Done'] ? checkboxShow.checked = true : checkboxShow.checked = false;
+    const removeButton = document.createElement('button');
+    removeButton.textContent = "Remove";
 
     const showSection = document.querySelector('.show-section');
 
@@ -45,4 +47,13 @@ for (let i = 0; i < dataArray.length; i++) {
     showSectionDiv.appendChild(detailsLabel);
     showSectionDiv.appendChild(dateLabel);
     showSectionDiv.appendChild(checkboxShow);
+    showSectionDiv.appendChild(removeButton);
+
+
+    removeButton.addEventListener('click', () => {
+        dataArray = deleteTodo(dataArray, dataArray[i]['id']);
+        localStorage.setItem("dataArray", JSON.stringify(dataArray));
+        location.reload();
+    })
+
 }

@@ -69,3 +69,11 @@ label {
 .showSection__div:last-child {
   border: none;
 }
+
+button {
+  margin: 20px;
+}
+
+label {
+  padding: 10px 30px;
+}
