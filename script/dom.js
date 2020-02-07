@@ -27,6 +27,7 @@
       deleteButtonNode.addEventListener('click', function(event) {
         var newState = todoFunctions.deleteTodo(state, todo.id);
         update(newState);
+        console.log(newState)
       });
       
   
@@ -35,7 +36,12 @@
       const markTodoCheck = document.createElement('input');
       markTodoCheck.setAttribute('type','checkbox');
       markTodoCheck.className = "checkbox";
-  
+      
+      markTodoCheck.addEventListener('click', (event) => {
+        var newState = todoFunctions.markTodo(state, todo.id);
+        console.log("A")
+        update(newState);
+      })
       // add classes for css
   
 
@@ -56,6 +62,7 @@
 
         var newState = todoFunctions.addTodo(state,addTodoForm.description.value);
         update(newState);
+        console.log(state)
       });
     }
   
