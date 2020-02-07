@@ -13,31 +13,42 @@
   </head>
   <body>
     <main>
-      <section class="add-section">
-        <div class="form__div">
-          <div class="form__label-input-div">
-            <label for="name">Name</label>
-            <input type="text" id="addName" placeholder="To-Do Name" />
-          </div>
-          <div class="form__label-input-div">
-            <label for="details">Details</label>
-            <input type="text" id="addDetails" placeholder="To-Do Details" />
-          </div>
-          <div class="form__label-input-div">
-            <label for="date">Date</label>
-            <input type="date" id="addDate" />
-          </div>
-          <div class="form__checkbox">
-            <label for="Done">Done</label>
-            <input type="checkbox" id="todoDone" />
-          </div>
+      <div id = "todo-container">
+        <ul>
+        </ul>
+    </div>
+    <form id="add-todo">
+      <input type="text" name="description" class="form__input" value="" placeholder="To-Do Details">
+      <input type="submit" name="" class="form__btn" value="Submit">
+    </form>
 
-          <button class="form__btn" id="addButton" type="submit">
-            Add To-Do
-          </button>
-        </div>
-      </section>
-      <section class="show-section"></section>
+      <!--
+        <section class="add-section">
+          <div class="form__div">
+            <div class="form__label-input-div">
+              <label for="name">Name</label>
+              <input type="text" id="addName" placeholder="To-Do Name" />
+            </div>
+            <div class="form__label-input-div">
+              <label for="details">Details</label>
+              <input type="text" id="addDetails" placeholder="To-Do Details" />
+            </div>
+            <div class="form__label-input-div">
+              <label for="date">Date</label>
+              <input type="date" id="addDate" />
+            </div>
+            <div class="form__checkbox">
+              <label for="Done">Done</label>
+              <input type="checkbox" id="todoDone" />
+            </div>
+  
+            <button class="form__btn" id="addButton" type="submit">
+              Add To-Do
+            </button>
+          </div>
+        </section>
+        <section class="show-section"></section>
+      -->
     </main>
     <script type="text/javascript" src="./script/logic.js"></script>
     <script type="text/javascript" src="./script/dom.js"></script>
