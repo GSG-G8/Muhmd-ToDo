@@ -36,10 +36,11 @@
       const markTodoCheck = document.createElement('input');
       markTodoCheck.setAttribute('type','checkbox');
       markTodoCheck.className = "checkbox";
+      todo.done ? markTodoCheck.checked = true : markTodoCheck.checked = false; 
       
       markTodoCheck.addEventListener('click', (event) => {
         var newState = todoFunctions.markTodo(state, todo.id);
-        console.log("A")
+        console.log(todo.done)
         update(newState);
       })
       // add classes for css
