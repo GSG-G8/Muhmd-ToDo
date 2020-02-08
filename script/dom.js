@@ -27,7 +27,6 @@
       deleteButtonNode.addEventListener('click', function(event) {
         var newState = todoFunctions.deleteTodo(state, todo.id);
         update(newState);
-        console.log(newState)
       });
       
   
@@ -40,7 +39,6 @@
       
       markTodoCheck.addEventListener('click', (event) => {
         var newState = todoFunctions.markTodo(state, todo.id);
-        console.log(todo.done)
         update(newState);
       })
       // add classes for css
