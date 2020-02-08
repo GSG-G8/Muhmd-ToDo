@@ -7,22 +7,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
 }
-section {
-  margin: 20px 20px 20px 100px;
-}
-.form__div {
-  display: flex;
-  align-items: center;
-}
 
-.form__label-input-div {
-  margin: 0 10px;
-}
-.form__checkbox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 input {
   background: #fafafa;
   border-radius: 5px;
@@ -30,15 +15,6 @@ input {
   line-height: 30px;
   color: #666;
   box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-}
-
-label {
-  font-size: 16px;
-  color: #555;
-  display: block;
-  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-  margin: 10px;
-  font-weight: 600;
 }
 
 .form__btn {
@@ -52,60 +28,64 @@ label {
   color: #fff;
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
   margin-left: 20px;
-}
-
-.show-section {
-  border: 3px solid #555;
-  border-radius: 24px;
-}
-
-.showSection__div {
-  display: flex;
-  align-items: center;
-  padding: 5px 50px;
-  border-bottom: 3px solid #000;
-}
-
-.showSection__div:last-child {
   border: none;
 }
 
-button {
-  margin: 20px;
-}
-
-label {
-  padding: 10px 30px;
+#todo-container, #add-todo {
+  margin: 10px auto;
 }
 
 ul {
-  border: 3px solid #555;
+  border: 3px solid #000;
   border-radius: 24px;
-  
+  width: 45em;
+  margin: 40px;
+
 }
 
-li {
+.description__li {
   display: flex;
  justify-content: space-around;
   align-items: center;
-  padding: 5px 50px;
   border-bottom: 3px solid #000;
-  width: 900px;
 }
 
-li:last-child {
+.description__li:last-child {
   border: none;
 }
 
-li span {
-  margin-right: 100px;
+.description__span {
+  font-size: 16px;
+  color: #111;
+  display: block;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  width: 75%;
+  overflow: auto;
+  margin: 10px;
+  padding: 10px;
 }
 
-li input {
-  margin: 0 100px;
+.checkbox {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.remove__btn {
+padding: 10px 50px;
+margin: 10px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+font-size: 16px;
+
 }
 
 .form__input {
-  margin: 50px;
   border: 1px solid #000; 
 }

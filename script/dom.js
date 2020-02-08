@@ -20,7 +20,7 @@
       // add span holding description
       const todoSpan = document.createElement('span');
       todoSpan.textContent = todo.description;
-  
+      
       // this adds the delete button
       var deleteButtonNode = document.createElement('button');
       deleteButtonNode.textContent = "Remove";
@@ -29,20 +29,24 @@
         update(newState);
       });
       
-  
+      
       // add markTodo button
-
+      
       const markTodoCheck = document.createElement('input');
       markTodoCheck.setAttribute('type','checkbox');
       markTodoCheck.className = "checkbox";
       todo.done ? markTodoCheck.checked = true : markTodoCheck.checked = false; 
+      // todoSpan.classList.toggle('Done');
       
       markTodoCheck.addEventListener('click', (event) => {
         var newState = todoFunctions.markTodo(state, todo.id);
         update(newState);
       })
       // add classes for css
-  
+      todoNode.className = "description__li";
+      todoSpan.className = "description__span";
+      deleteButtonNode.className = "remove__btn";
+
 
       todoNode.appendChild(todoSpan);
       todoNode.appendChild(markTodoCheck);
@@ -57,7 +61,7 @@
         // what does event.preventDefault do?
         // what is inside event.target?
         
-        var description = event.preventDefault(); // event.target ....
+        event.preventDefault(); // event.target ....
 
         var newState = todoFunctions.addTodo(state,addTodoForm.description.value);
         update(newState);
