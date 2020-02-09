@@ -3,18 +3,18 @@
 // it keeps everything inside hidden from the rest of our application
 (function() {
     // This is the dom node where we will keep our todo
-    var container = document.getElementById('todo-container');
-    var addTodoForm = document.getElementById('add-todo');
+    const container = document.getElementById('todo-container');
+    const addTodoForm = document.getElementById('add-todo');
   
-    var state = [
+    let state = [
       { id: -3, description: 'first todo' },
       { id: -2, description: 'second todo' },
       { id: -1, description: 'third todo' },
     ]; // this is our initial todoList
   
     // This function takes a todo, it returns the DOM node representing that todo
-    var createTodoNode = function(todo) {
-      var todoNode = document.createElement('li');
+    const createTodoNode = function(todo) {
+      const todoNode = document.createElement('li');
       // you will need to use addEventListener
   
       // add span holding description
@@ -22,10 +22,10 @@
       todoSpan.textContent = todo.description;
       
       // this adds the delete button
-      var deleteButtonNode = document.createElement('button');
+      const deleteButtonNode = document.createElement('button');
       deleteButtonNode.textContent = "Remove";
       deleteButtonNode.addEventListener('click', function(event) {
-        var newState = todoFunctions.deleteTodo(state, todo.id);
+        const newState = todoFunctions.deleteTodo(state, todo.id);
         update(newState);
       });
       
@@ -39,7 +39,7 @@
       // todoSpan.classList.toggle('Done');
       
       markTodoCheck.addEventListener('click', (event) => {
-        var newState = todoFunctions.markTodo(state, todo.id);
+        const newState = todoFunctions.markTodo(state, todo.id);
         update(newState);
       })
       // add classes for css
@@ -63,21 +63,24 @@
         
         event.preventDefault(); // event.target ....
 
-        var newState = todoFunctions.addTodo(state,addTodoForm.description.value);
+        const newState = todoFunctions.addTodo(state,{id: todoFunctions.generateId(),
+          description: addTodoForm.description.value,
+          done: false
+        }
+          );
         update(newState);
-        console.log(state)
       });
     }
   
     // you should not need to change this function
-    var update = function(newState) {
+    const update = function(newState) {
       state = newState;
       renderState(state);
     };
   
     // you do not need to change this function
-    var renderState = function(state) {
-      var todoListNode = document.createElement('ul');
+    const renderState = function(state) {
+      const todoListNode = document.createElement('ul');
   
       state.forEach(function(todo) {
         todoListNode.appendChild(createTodoNode(todo));
