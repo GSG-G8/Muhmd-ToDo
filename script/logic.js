@@ -2,11 +2,11 @@
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
 
-var todoFunctions = {
+const todoFunctions = {
     // todoFunctions.generateId() will give you a unique id
     // You do not need to understand the implementation of this function.
     generateId: (function() {
-      var idCounter = 0;
+      let idCounter = 0;
   
       function incrementCounter() {
         return (idCounter += 1);
@@ -24,10 +24,7 @@ var todoFunctions = {
     },
     
     addTodo: function(todos, newTodo) {
-      return this.cloneArrayOfObjects([...todos, {id: this.generateId(),
-        description: newTodo,
-        done: false
-    }]);
+      return todoFunctions.cloneArrayOfObjects([...todos, newTodo]);
       
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // returns a new array, it should contain todos with the newTodo added to the end.
@@ -35,18 +32,18 @@ var todoFunctions = {
       // hint: array.concat
     },
     deleteTodo: function(todos, idToDelete) {
-       return this.cloneArrayOfObjects(todos.filter(todo => todo.id !== idToDelete));
+       return todoFunctions.cloneArrayOfObjects(todos.filter(todo => todo.id !== idToDelete));
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // return a new array, this should not contain any todo with an id of idToDelete
       // hint: array.filter
     },
     markTodo: function(todos, idToMark) {
 
-      return this.cloneArrayOfObjects(todos.map(todo => ({id: todo.id,
+      return todoFunctions.cloneArrayOfObjects(todos.map(todo => ({id: todo.id,
       description: todo.description,
-    done: todo.id === idToMark ? !todo.done : todo.done})
+    done: todo.id === idToMark ? !todo.done : todo.done}
         
-        ))
+        )));
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // in the new todo array, all elements will remain unchanged except the one with id: idToMark
       // this element will have its done value toggled
