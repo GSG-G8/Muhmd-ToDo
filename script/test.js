@@ -50,7 +50,6 @@ test("id to be increased", () => {
 
 test("expected new array", () => {
   expect(addTodo(dataArray, todo)).toEqual(array1);
-  // console.log(addTodo(dataArray, todo))
 });
 
 test("Remove object from an array", () => {
