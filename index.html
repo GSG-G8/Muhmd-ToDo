@@ -13,15 +13,18 @@
   </head>
   <body>
     <main>
+      <form id="add-todo">
+        <input
+          type="text"
+          name="description"
+          class="form__input"
+          value=""
+          placeholder="To-Do Details"
+        />
+        <input type="submit" name="" class="form__btn" value="Submit" />
+      </form>
 
-        <form id="add-todo">
-          <input type="text" name="description" class="form__input" value="" placeholder="To-Do Details">
-          <input type="submit" name="" class="form__btn" value="Submit">
-        </form>
-
-      <section id = "todo-container">
-
-      </section>
+      <section id="todo-container"></section>
     </main>
     <script type="text/javascript" src="./script/logic.js"></script>
     <script type="text/javascript" src="./script/dom.js"></script>

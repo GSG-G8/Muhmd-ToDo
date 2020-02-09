@@ -31,7 +31,8 @@ input {
   border: none;
 }
 
-#todo-container, #add-todo {
+#todo-container,
+#add-todo {
   margin: 10px auto;
 }
 
@@ -40,12 +41,11 @@ ul {
   border-radius: 24px;
   width: 45em;
   margin: 40px;
-
 }
 
 .description__li {
   display: flex;
- justify-content: space-around;
+  justify-content: space-around;
   align-items: center;
   border-bottom: 3px solid #000;
 }
@@ -76,16 +76,15 @@ ul {
 }
 
 .remove__btn {
-padding: 10px 50px;
-margin: 10px;
-border: none;
-border-radius: 8px;
-cursor: pointer;
-font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-font-size: 16px;
-
+  padding: 10px 50px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  font-size: 16px;
 }
 
 .form__input {
-  border: 1px solid #000; 
+  border: 1px solid #000;
 }
